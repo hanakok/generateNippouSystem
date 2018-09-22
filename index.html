@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>日報生成システム</title>
+        <link rel="stylesheet" type="text/css" href="assets/index.css">
+        <script type="text/javascript" src="assets/index.js"></script>
+    </head>
+    <body>
+        <div class="page_title">
+            =============<br />
+            日報生成システム<br />
+            =============<br />
+        </div>
+        <div class="form">
+            <table>
+                <thead>
+                    <tr>
+                        <th>工数 <label class="required">*</label></th>
+                        <th>分類</th>
+                        <th>内容 <label class="required">*</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select class="kousu01">
+                                <option value="">選択してください</option>
+                                <option value="0.5h">0.5h</option>
+                                <option value="1.0h">1.0h</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="classify01">
+                                <option value="">選択してください</option>
+                                <option value="【MTG】">【MTG】</option>
+                                <option value="ほげほげPJ">ほげほげPJ</option>
+                                <option value="ふがふが案件">ふがふが案件</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" class="detail01">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" class="generate" value="生成！">
+        </div>
+        <div class="result">
+            <textarea cols="70" rows="20"></textarea>
+        </div>
+    </body>
+</html>
