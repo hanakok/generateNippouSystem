@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
     <head>
         <title>日報生成システム</title>
         <link rel="stylesheet" type="text/css" href="assets/index.css">
-        <script type="text/javascript" src="assets/index.js"></script>
     </head>
     <body>
-        <div class="page_title">
+        <header class="page_title">
             =============<br />
             日報生成システム<br />
             =============<br />
-        </div>
+        </header>
         <div class="form">
             <table>
                 <thead>
@@ -23,7 +22,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <select class="kousu01">
+                            <select class="kousu01" required>
                                 <option value="">選択してください</option>
                                 <option value="0.5h">0.5h</option>
                                 <option value="1.0h">1.0h</option>
@@ -38,15 +37,17 @@
                             </select>
                         </td>
                         <td>
-                            <input type="text" class="detail01">
+                            <input type="text" class="detail01" required>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <input type="button" class="generate" value="生成！">
+            <button class="generate">生成！</button>
         </div>
         <div class="result">
-            <textarea cols="70" rows="20"></textarea>
+            <textarea class="generatedNippou" cols="70" rows="20"></textarea>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/index.js"></script>
     </body>
 </html>
