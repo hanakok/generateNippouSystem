@@ -26,3 +26,7 @@ input[type="text"] {
     margin: 20px;
     resize: none;
 }
+
+input.kousu {
+    width: 40px;
+}

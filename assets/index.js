@@ -4,12 +4,21 @@ $(function(){
      * 日報の生成ロジック
      */
     $('.generate').on('click', function(){
-        var kousu    = $('.kousu01').val(),
-            classify = $('.classify01').val(),
-            detail   = $('.detail01').val(),
-            target   = $('.generatedNippou');
+        var target   = $('.generatedNippou'),
+            body     = '',
+            max      = 8;
 
-        target.val(kousu + ' ' + classify + ' ' + detail);
+        for (i=1; i<=max; i++) {
+            record = '';
+            if ($('#detail-' + i).val() !== '') {
+                record = $('#kousu-' + i).val() + 'h '
+                    + $('#classify-' + i).val() + ' '
+                    + $('#detail-' + i).val();
+            }
+
+            body = body + record;
+        }
+
+        target.val(body);
     });
 });
-
